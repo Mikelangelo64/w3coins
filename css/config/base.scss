@@ -387,3 +387,11 @@ body {
     }
 }
 
+@keyframes light-on {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

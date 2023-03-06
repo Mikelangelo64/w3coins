@@ -179,7 +179,20 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   //anchor menu
-  const anchors = document.querySelectorAll('header ._anchor');
+
+  //stake anchor handler
+  const stakeAnchorHandler = (section, type) => {
+    const buttons = section.querySelectorAll('.separate-bullet');
+    if (buttons.length === 0) {
+      return;
+    }
+    //anchor.addEventListener('click', () => {
+    console.log(buttons[type]);
+    buttons[type].click();
+    //});
+  };
+
+  const anchors = document.querySelectorAll('._anchor');
   if (anchors.length !== 0) {
     anchors.forEach((anchor) => {
       //console.log(anchor);
@@ -192,6 +205,14 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!section || !header) {
           return null;
         }
+
+        if (sectionClass === '.stake') {
+          stakeAnchorHandler(
+            section,
+            evt.target.dataset.stake === 'mainnet' ? 0 : 1
+          );
+        }
+
         const paddingTop = parseInt(
           (section.currentStyle || window.getComputedStyle(section)).paddingTop
         );

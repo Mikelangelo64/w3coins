@@ -134,6 +134,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  const formButtons = document.querySelectorAll(
+    '.feedback-form button[type=submit], .feedback-form input[type=submit]'
+  );
+  if (formButtons.length !== 0) {
+    formButtons.forEach((button) => {
+      button.addEventListener('click', (evt) => {
+        //evt.preventDefault();
+
+        const popup = document.querySelector(
+          '.popup[data-popupname=_popup-thanks]'
+        );
+
+        popupAnimations['_popup-thanks'].play();
+
+        popup.classList.add('_opened');
+        document.querySelector('html').classList.add('_lock');
+        document.querySelector('body').classList.add('_lock');
+      });
+    });
+  }
+
   //close popup
   const popupCloseBtns = document.querySelectorAll('.popup__close');
   const popupArr = document.querySelectorAll('.popup');
@@ -158,6 +179,23 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  //popup thanks close for button inside
+  const closeThanks = document.querySelector(
+    '.popup[data-popupname=_popup-thanks] .popup__button'
+  );
+  closeThanks &&
+    closeThanks.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      const popup = document.querySelector(
+        '.popup[data-popupname=_popup-thanks]'
+      );
+      popup.classList.remove('_opened');
+      popupAnimations['_popup-thanks'].reverse();
+
+      document.querySelector('html').classList.remove('_lock');
+      document.querySelector('body').classList.remove('_lock');
+    });
 
   if (popupArr) {
     popupArr.forEach((item) => {

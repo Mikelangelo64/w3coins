@@ -849,6 +849,11 @@ html:not(.v-mobile) .menu-burger:hover::after {
     display: none !important;
   }
 }
+.popup.popup-thanks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .popup__scroll {
   width: 100%;
   height: auto;
@@ -879,6 +884,10 @@ html:not(.v-mobile) .menu-burger:hover::after {
     margin: 0 0 0 auto;
   }
 }
+.popup.popup-thanks .popup__scroll {
+  margin: auto;
+}
+
 .popup__wrapper {
   position: relative;
   width: 100%;
@@ -972,6 +981,40 @@ html:not(.v-mobile) .menu-burger:hover::after {
   max-width: unset;
 }
 
+.popup.popup-thanks .popup__content {
+  margin: 0 auto;
+}
+
+.popup__title {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 120%;
+  margin-bottom: 1.5rem;
+}
+.popup__button__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.popup__button {
+  border: unset;
+  padding: 0.625rem 2.25rem;
+  text-transform: uppercase;
+}
+@media (min-width: 900px) {
+  .popup__button {
+    border-radius: 2.5rem;
+  }
+}
+@media (max-width: 899px) {
+  .popup__button {
+    border-radius: 1.875rem;
+  }
+}
+
 .stars {
   position: absolute;
   inset: 0;
@@ -990,18 +1033,17 @@ html:not(.v-mobile) .menu-burger:hover::after {
 }
 .stars__item:nth-child(1) svg,
 .stars__item:nth-child(1) img {
-  animation-direction: reverse;
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }
 .stars__item:nth-child(2) svg,
 .stars__item:nth-child(2) img {
-  animation-direction: reverse;
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }
 .stars__item:nth-child(3) svg,
 .stars__item:nth-child(3) img {
+  animation-direction: reverse;
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }
@@ -1012,27 +1054,30 @@ html:not(.v-mobile) .menu-burger:hover::after {
 }
 .stars__item:nth-child(5) svg,
 .stars__item:nth-child(5) img {
-  animation-direction: reverse;
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }
 .stars__item:nth-child(6) svg,
 .stars__item:nth-child(6) img {
+  animation-direction: reverse;
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }
 .stars__item:nth-child(7) svg,
 .stars__item:nth-child(7) img {
+  animation-direction: reverse;
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }
 .stars__item:nth-child(8) svg,
 .stars__item:nth-child(8) img {
+  animation-direction: reverse;
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }
 .stars__item:nth-child(9) svg,
 .stars__item:nth-child(9) img {
+  animation-direction: reverse;
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }

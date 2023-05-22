@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (formButtons.length !== 0) {
     formButtons.forEach((button) => {
       button.addEventListener('click', (evt) => {
-        //evt.preventDefault();
+        evt.preventDefault();
 
         const popup = document.querySelector(
           '.popup[data-popupname=_popup-thanks]'

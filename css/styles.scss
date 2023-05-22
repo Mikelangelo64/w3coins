@@ -1244,6 +1244,14 @@ section {
 
         //.separate-header__item 
         &__item {
+            &:nth-child(1) {
+                width: 100%;
+            }
+    
+            &:nth-child(2) {
+                flex-shrink: 0;
+            }
+            
             > * + * {
                 @include viewport-tablet-min {
                     margin-top: px-to-rem(32);
@@ -1257,17 +1265,22 @@ section {
         
         //.separate-header__btn__container 
         &__btn__container {
-            display: flex;
+            display: grid;
 
+            gap: px-to-rem(20) 0;
+            
             @include viewport-desktop {
+                grid-template-columns: repeat(auto-fill, minmax(px-to-rem(176), 1fr));
                 font-size: px-to-rem(24);
             }
-    
+            
             @include viewport-tablet {
+                grid-template-columns: repeat(auto-fill, minmax(px-to-rem(176), 1fr));
                 font-size: px-to-rem(22);
             }
-    
+            
             @include viewport-phone {
+                grid-template-columns: repeat(auto-fill, minmax(px-to-rem(135), 1fr));
                 font-size: px-to-rem(18); 
             }
         }

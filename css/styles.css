@@ -1038,6 +1038,7 @@ html:not(.v-mobile) .menu-burger:hover::after {
 }
 .stars__item:nth-child(2) svg,
 .stars__item:nth-child(2) img {
+  animation-direction: reverse;
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }
@@ -1049,6 +1050,7 @@ html:not(.v-mobile) .menu-burger:hover::after {
 }
 .stars__item:nth-child(4) svg,
 .stars__item:nth-child(4) img {
+  animation-direction: reverse;
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }
@@ -1059,25 +1061,21 @@ html:not(.v-mobile) .menu-burger:hover::after {
 }
 .stars__item:nth-child(6) svg,
 .stars__item:nth-child(6) img {
-  animation-direction: reverse;
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }
 .stars__item:nth-child(7) svg,
 .stars__item:nth-child(7) img {
-  animation-direction: reverse;
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }
 .stars__item:nth-child(8) svg,
 .stars__item:nth-child(8) img {
-  animation-direction: reverse;
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }
 .stars__item:nth-child(9) svg,
 .stars__item:nth-child(9) img {
-  animation-direction: reverse;
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }
@@ -1814,6 +1812,13 @@ html:not(.v-mobile) .stake-info__button:hover::after {
     margin-top: 1.125rem;
   }
 }
+.separate-header__item:nth-child(1) {
+  width: 100%;
+}
+.separate-header__item:nth-child(2) {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
 @media (min-width: 900px) {
   .separate-header__item > * + * {
     margin-top: 2rem;
@@ -1825,22 +1830,25 @@ html:not(.v-mobile) .stake-info__button:hover::after {
   }
 }
 .separate-header__btn__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  gap: 1.25rem 0;
 }
 @media (min-width: 1200px) {
   .separate-header__btn__container {
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
     font-size: 1.5rem;
   }
 }
 @media (min-width: 900px) and (max-width: 1199px) {
   .separate-header__btn__container {
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
     font-size: 1.375rem;
   }
 }
 @media (max-width: 899px) {
   .separate-header__btn__container {
+    grid-template-columns: repeat(auto-fill, minmax(8.4375rem, 1fr));
     font-size: 1.125rem;
   }
 }
